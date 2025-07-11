@@ -1,4 +1,4 @@
-package blackjack.model
+package backup.model
 
 class Hand() {
     private val hold: Hold = Hold(setOf())

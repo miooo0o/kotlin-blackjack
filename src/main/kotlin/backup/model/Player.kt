@@ -1,4 +1,4 @@
-package blackjack.model
+package backup.model
 
 class Player(name: String) {
     private val person = Person(name)

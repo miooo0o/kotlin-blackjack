@@ -1,6 +1,8 @@
-package blackjack.model
+package backup.controller
 
-import blackjack.view.OutputView
+import backup.model.CardDeck
+import backup.model.Player
+import backup.view.OutputView
 
 class GameManager(private val dealer: Player, private val players: List<Player>) {
     private val cardDeck = CardDeck()
@@ -31,7 +33,7 @@ class GameManager(private val dealer: Player, private val players: List<Player>)
 
     private fun roundForPlayers(
         player: Player,
-        askForCard: () -> Boolean,
+        askForCard: () -> Boolean = { true },
     ) {
         while (ableToReceive(player)) {
             OutputView.printAskForCard(player)

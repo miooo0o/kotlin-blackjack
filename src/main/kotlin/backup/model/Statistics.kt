@@ -1,4 +1,4 @@
-package blackjack.model
+package backup.model
 
 class Statistics(private val dealer: Player, private val players: List<Player>) {
     val totalResult

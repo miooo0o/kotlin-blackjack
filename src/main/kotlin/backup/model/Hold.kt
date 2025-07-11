@@ -1,4 +1,4 @@
-package blackjack.model
+package backup.model
 
 class Hold(hold: Set<Card>) {
     private val _cards: MutableSet<Card> = hold.toMutableSet()

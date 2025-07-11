@@ -1,4 +1,4 @@
-package blackjack.view
+package backup.view
 
 object InputView {
     fun getPlayersName(): List<String> {

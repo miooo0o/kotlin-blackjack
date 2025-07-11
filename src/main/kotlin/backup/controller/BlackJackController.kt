@@ -1,10 +1,9 @@
-package blackjack.controller
+package backup.controller
 
-import blackjack.model.GameManager
-import blackjack.model.PlayerFactory
-import blackjack.model.Statistics
-import blackjack.view.InputView
-import blackjack.view.OutputView
+import backup.model.PlayerFactory
+import backup.model.Statistics
+import backup.view.InputView
+import backup.view.OutputView
 
 object BlackJackController {
     fun play() {

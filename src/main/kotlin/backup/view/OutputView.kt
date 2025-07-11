@@ -1,7 +1,7 @@
-package blackjack.view
+package backup.view
 
-import blackjack.model.Player
-import blackjack.model.Statistics
+import backup.model.Player
+import backup.model.Statistics
 
 object OutputView {
     fun printAllPlayers(players: List<Player>) {

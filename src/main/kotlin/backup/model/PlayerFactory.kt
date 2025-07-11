@@ -1,4 +1,4 @@
-package blackjack.model
+package backup.model
 
 object PlayerFactory {
     fun with(names: List<String>) = names.map { Player(it) }

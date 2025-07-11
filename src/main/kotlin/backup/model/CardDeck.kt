@@ -1,4 +1,4 @@
-package blackjack.model
+package backup.model
 
 data class CardDeck(private val hold: Hold) {
     constructor() : this(initPokerCards())
