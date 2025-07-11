@@ -16,10 +16,10 @@
 > remove duplicated logic, make a flow to start to end (connect classes)
 
 ## Card
-- [ ] implement Card
+- [x] implement Card
 
 ## Cards
-- [ ] implement Cards
+- [x] implement Cards
   - List<Card>
 
 ## Hold
