@@ -1,7 +1,7 @@
 package backup.model
 
 enum class Suit(val symbol: String) {
-    HEART("♥"),
+    HEARTS("♥"),
     DIAMONDS("♦"),
     CLUBS("♣"),
     SPADES("♠"),
