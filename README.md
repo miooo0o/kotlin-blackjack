@@ -11,32 +11,47 @@
 - The dealer must draw a card if their total is 16 or less, and must stand on 17 or more.
 - If the dealer busts (goes over 21), all remaining players automatically win.
 - After the game ends, display the result (win/loss) for each player.
-- 
-## Features
-- [x] Validate input name of players
 
-### Card
-- [x] implement simple card class
-  - [x] has index
-  - [x] has symbol : enum class { hearts, spades , clubs, diamonds }
+# step 1—refactoring...
+> remove duplicated logic, make a flow to start to end (connect classes)
 
-### Hold
-- [x] implement Hold, wrapper class, Set<Card>
-- [x] provide all unique elements
+## Card
+- [ ] implement Card
 
-### CardDeck
-- [x] cardDeck can hit cards to players
-- [x] implement CardDeck, wrapper class, Hold and Set<Card * 52> 
-- [x] add shuffle logic when initialed
+## Cards
+- [ ] implement Cards
+  - List<Card>
 
-### Player / Person
-- [x] implement class
+## Hold
+- [ ] implement Hold / inherit Cards
+  - [ ] card/s swap logic
+  - [ ] notice if Cards-List is empty
 
-### Rank
-- [x] Face cards (King, Queen, Jack) are each worth 10
-- [x] toString(): return symbol character with Rank()
+## Hand
+- [ ] implement Hand / inherit Hold
+  - [ ] can be duplicated
 
-### Questions
-- How can we make testable private functions? What is the good practise?
-  1. internal
-  2. companion object
+## Deck
+- [ ] implement Deck / inherit Hold
+  - [ ] validation
+    - [ ] no duplicate cards
+    - [ ] return type is List
+    - [ ] 52 cards
+- [ ] check if empty, what it can do more
+  - generate new cards? print some message?
+- [ ] implement shuffle logic. inject from outside class
+
+## Player
+- [ ] implement Participant
+  - [ ] has Hand
+- [ ] implement Player
+- [ ] implement Dealer
+
+## state of Player
+#### final state
+- [ ] Bust
+- [ ] BlackJack
+#### action to try
+- [ ] Draw
+- [ ] Hit
+- [ ] Stay -> somehow it can be part of result 
