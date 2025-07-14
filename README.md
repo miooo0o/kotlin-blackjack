@@ -20,8 +20,9 @@
 OutputView.printFinalResults(listOf(dealer) + players)
 OutputView.printStatistics(statistics)
 ```
-- 
-- [ ] model/Hand.kt → use emptySet() instead set()
+
+- [x] model/Hand.kt → use emptySet() instead set()
+- [ ] model/Hand.kt → use list() instead set()
 - [ ] model/Player.kt → improve readability
 - [ ] model/PlayerFactory.kt → improve readability, method names
 - [ ] model/CardDeck.kt → if card is empty
