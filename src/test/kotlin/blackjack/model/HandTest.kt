@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 
 class HandTest {
     @Test
-    fun calculatePoints() {
+    fun `cards has ace, and total points is 17 `() {
         val player = Player("doggo")
         val listOfCards =
             listOf(
@@ -19,7 +19,7 @@ class HandTest {
     }
 
     @Test
-    fun hasPoints2() {
+    fun `cards has ace, total points is 21`() {
         val player = Player("doggo")
         val listOfCards =
             listOf(
@@ -31,7 +31,7 @@ class HandTest {
     }
 
     @Test
-    fun hasPoints3() {
+    fun`cards have triple ace, total points is 13`() {
         val player = Player("doggo")
         val listOfCards =
             listOf(
@@ -46,7 +46,7 @@ class HandTest {
     }
 
     @Test
-    fun hasPoints4() {
+    fun`cards have triple ace, total points is 20`() {
         val player = Player("doggo")
         val listOfCards =
             listOf(

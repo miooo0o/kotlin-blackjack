@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 
 class PlayerFactoryTest {
     @Test
-    fun with() {
+    fun `create players with list of names`() {
         val names = listOf("mina", "vito")
         val players = PlayerFactory.createPlayers(names)
         assertThat(players).hasSize(2)
