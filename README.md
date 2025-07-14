@@ -22,9 +22,9 @@ OutputView.printStatistics(statistics)
 ```
 
 - [x] model/Hand.kt → use emptySet() instead set()
-- [ ] model/Hand.kt → use list() instead set()
+- [x] model/Hand.kt → use list() instead set() in Hold
 - [x] model/Player.kt → improve readability
-- [ ] model/PlayerFactory.kt → improve readability, method names
+- [x] model/PlayerFactory.kt → improve readability, method names
 - [ ] model/CardDeck.kt → if card is empty
 - [x] model/Hold.kt / in GameManager -> improve readability
 ```kotlin
