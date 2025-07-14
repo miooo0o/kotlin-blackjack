@@ -6,9 +6,9 @@ class Hand() {
     val cards
         get() = hold.cards
 
-    fun numberOfCards() = hold.cards.size
+    fun cardsCount(): Int = hold.cards.size
 
-    fun addCard(card: Card) = this.hold.add(card)
+    fun addCard(card: Card): Boolean = this.hold.addCard(card)
 
     fun calculatePoints(): Int {
         val countOfAce = hold.cards.filter { it.rank.value == 1 }.size

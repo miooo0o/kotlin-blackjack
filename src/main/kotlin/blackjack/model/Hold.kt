@@ -11,9 +11,7 @@ class Hold(hold: Set<Card>) {
         to.addCard(target)
     }
 
-    fun add(card: Card) {
-        _cards.add(card)
-    }
+    fun addCard(card: Card): Boolean = _cards.add(card)
 
     operator fun plus(other: Hold): Hold {
         return Hold((other.cards + this.cards))

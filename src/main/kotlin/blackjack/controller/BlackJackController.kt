@@ -1,6 +1,5 @@
 package blackjack.controller
 
-import blackjack.controller.GameManager
 import blackjack.model.PlayerFactory
 import blackjack.model.Statistics
 import blackjack.view.InputView

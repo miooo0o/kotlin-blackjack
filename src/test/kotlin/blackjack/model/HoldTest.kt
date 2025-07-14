@@ -18,7 +18,7 @@ class HoldTest {
         val player = Player("Mina")
         hold.moveCard(player)
 
-        assertThat(player.numberInHand()).isEqualTo(1)
+        assertThat(player.cardsCount()).isEqualTo(1)
     }
 
     @Test
