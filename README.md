@@ -23,7 +23,7 @@ OutputView.printStatistics(statistics)
 
 - [x] model/Hand.kt → use emptySet() instead set()
 - [ ] model/Hand.kt → use list() instead set()
-- [ ] model/Player.kt → improve readability
+- [x] model/Player.kt → improve readability
 - [ ] model/PlayerFactory.kt → improve readability, method names
 - [ ] model/CardDeck.kt → if card is empty
 - [ ] model/Hold.kt / in GameManager -> improve readability
