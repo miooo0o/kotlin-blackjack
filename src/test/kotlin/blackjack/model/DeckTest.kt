@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 
 class DeckTest {
     @Test
-    fun `CardDeck has 52 cards`() {
+    fun `CardDeck have 52 cards`() {
         val deck = Deck()
         assertThat(deck.countCards()).isEqualTo(52)
     }
