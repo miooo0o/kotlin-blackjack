@@ -55,12 +55,12 @@ class GameManager(private val dealer: Player, private val players: List<Player>)
 
     private fun ableToReceive(player: Player): Boolean {
         val isDealer = player === dealer
-        if (isDealer) return dealer.calculatePoints() <= ABLE_TO_RECEIVE
+        if (isDealer) return dealer.calculatePoints() <= DEALER_MUST_HIT_LIMIT
         return player.calculatePoints() < BLACKJACK
     }
 
     companion object {
-        private const val ABLE_TO_RECEIVE = 16
+        private const val DEALER_MUST_HIT_LIMIT = 16
         private const val BLACKJACK = 21
     }
 }
