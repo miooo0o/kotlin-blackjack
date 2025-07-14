@@ -13,8 +13,8 @@ class DeckTest {
     @Test
     fun `hit a card to a player`() {
         val deck = Deck()
-        val player1 = Player("Mina")
-        deck.hit(player1)
-        assertThat(player1.cardsCount()).isEqualTo(1)
+        val player = Player("Mina")
+        player.receiveCards(deck.drawCards(1))
+        assertThat(player.cardsCount()).isEqualTo(1)
     }
 }

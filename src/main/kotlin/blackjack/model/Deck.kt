@@ -3,16 +3,11 @@ package blackjack.model
 data class Deck(private val hold: Hold) {
     constructor() : this(initPokerCards())
 
-    fun getCards() = hold.cards.toList()
+    fun getCards(): List<Card> = hold.cards.toList()
 
-    fun countCards() = hold.cards.size
+    fun countCards(): Int = hold.cards.size
 
-    fun hit(
-        player: Player,
-        repeat: Int = 1,
-    ) {
-        repeat(repeat) { hold.moveCard(player) }
-    }
+    fun drawCards(count: Int): List<Card> = hold.drawCards(count)
 
     companion object {
         private fun initPokerCards() = Hold(list().shuffled().toSet())

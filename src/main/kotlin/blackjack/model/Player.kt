@@ -15,7 +15,7 @@ class Player(name: String) {
     val isBust: Boolean
         get() = calculatePoints() > 21
 
-    fun addCard(card: Card): Boolean = hand.addCard(card)
+    fun receiveCards(cards: List<Card>): Boolean = hand.receiveCards(cards)
 
     fun cardsCount(): Int = hand.cardsCount()
 

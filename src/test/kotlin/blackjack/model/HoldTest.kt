@@ -16,7 +16,7 @@ class HoldTest {
                 ),
             )
         val player = Player("Mina")
-        hold.moveCard(player)
+        player.receiveCards(hold.drawCards(1))
 
         assertThat(player.cardsCount()).isEqualTo(1)
     }
@@ -33,15 +33,15 @@ class HoldTest {
                 ),
             )
         val player = Player("Mina")
-        hold.moveCard(player)
+        player.receiveCards(hold.drawCards(1))
         assertThat(hold.cards).hasSize(3)
     }
 
     @Test
     fun `order of cards in two cardDesks is different`() {
-        val cardDesk1 = CardDeck().getCards()
-        val cardDesk2 = CardDeck().getCards()
+        val cardDesk1 = Deck().getCards()
+        val cardDesk2 = Deck().getCards()
 
-        assertThat(cardDesk1).isNotEqualTo(cardDesk2)
+        assertThat(cardDesk1).isNotSameAs(cardDesk2)
     }
 }

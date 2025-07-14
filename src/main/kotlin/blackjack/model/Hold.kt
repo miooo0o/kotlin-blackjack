@@ -5,15 +5,10 @@ class Hold(hold: Set<Card>) {
     val cards: Set<Card>
         get() = _cards.toSet()
 
-    fun moveCard(to: Player) {
-        val target = _cards.first()
-        _cards.remove(target)
-        to.addCard(target)
+    fun drawCards(count: Int): List<Card> {
+        return _cards.take(count).toList()
+            .also { repeat(count) { _cards.remove(_cards.first()) } }
     }
 
-    fun addCard(card: Card): Boolean = _cards.add(card)
-
-    operator fun plus(other: Hold): Hold {
-        return Hold((other.cards + this.cards))
-    }
+    fun receiveCards(cards: List<Card>): Boolean = _cards.addAll(cards)
 }

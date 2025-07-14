@@ -1,15 +1,15 @@
 package blackjack.controller
 
-import blackjack.model.CardDeck
+import blackjack.model.Deck
 import blackjack.model.Player
 import blackjack.view.OutputView
 
 class GameManager(private val dealer: Player, private val players: List<Player>) {
-    private val cardDeck = CardDeck()
+    private val deck = Deck()
 
     fun setUp() {
-        players.forEach { cardDeck.hit(it, 2) }
-        cardDeck.hit(dealer)
+        players.forEach { player -> player.receiveCards(deck.drawCards(2)) }
+        dealer.receiveCards(deck.drawCards(1))
     }
 
     fun playGame(
@@ -38,7 +38,7 @@ class GameManager(private val dealer: Player, private val players: List<Player>)
         while (ableToReceive(player)) {
             OutputView.printAskForCard(player)
             if (askForCard()) {
-                cardDeck.hit(player)
+                player.receiveCards(deck.drawCards(1))
                 OutputView.printOnePlayer(player)
             } else {
                 break
@@ -48,7 +48,7 @@ class GameManager(private val dealer: Player, private val players: List<Player>)
 
     private fun roundForDealer(player: Player) {
         while (ableToReceive(player)) {
-            cardDeck.hit(player)
+            player.receiveCards(deck.drawCards(1))
         }
         OutputView.printDealerDrawsCards(player)
     }
