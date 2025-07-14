@@ -26,11 +26,11 @@ OutputView.printStatistics(statistics)
 - [x] model/Player.kt → improve readability
 - [ ] model/PlayerFactory.kt → improve readability, method names
 - [ ] model/CardDeck.kt → if card is empty
-- [ ] model/Hold.kt / in GameManager -> improve readability
+- [x] model/Hold.kt / in GameManager -> improve readability
 ```kotlin
     players.forEach { player ->
         player.addCards(cardDeck.drawCards(2))
     }
 ```
 
-- [ ] controller/GameManager → ABLE_TO_RECEIVE → DEALER_MUST_HIT_LIMIT
+- [x] controller/GameManager → ABLE_TO_RECEIVE → DEALER_MUST_HIT_LIMIT
