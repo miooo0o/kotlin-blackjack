@@ -13,30 +13,23 @@
 - After the game ends, display the result (win/loss) for each player.
 - 
 ## Features
-- [x] Validate input name of players
 
-### Card
-- [x] implement simple card class
-  - [x] has index
-  - [x] has symbol : enum class { hearts, spades , clubs, diamonds }
+### apply review
+- [ ] controller/BlackJackController.kt → combined
+```kotlin
+OutputView.printFinalResults(listOf(dealer) + players)
+OutputView.printStatistics(statistics)
+```
+- 
+- [ ] model/Hand.kt → use emptySet() instead set()
+- [ ] model/Player.kt → improve readability
+- [ ] model/PlayerFactory.kt → improve readability, method names
+- [ ] model/CardDeck.kt → if card is empty
+- [ ] model/Hold.kt / in GameManager -> improve readability
+```kotlin
+    players.forEach { player ->
+        player.addCards(cardDeck.drawCards(2))
+    }
+```
 
-### Hold
-- [x] implement Hold, wrapper class, Set<Card>
-- [x] provide all unique elements
-
-### CardDeck
-- [x] cardDeck can hit cards to players
-- [x] implement CardDeck, wrapper class, Hold and Set<Card * 52> 
-- [x] add shuffle logic when initialed
-
-### Player / Person
-- [x] implement class
-
-### Rank
-- [x] Face cards (King, Queen, Jack) are each worth 10
-- [x] toString(): return symbol character with Rank()
-
-### Questions
-- How can we make testable private functions? What is the good practise?
-  1. internal
-  2. companion object
+- [ ] controller/GameManager → ABLE_TO_RECEIVE → DEALER_MUST_HIT_LIMIT
