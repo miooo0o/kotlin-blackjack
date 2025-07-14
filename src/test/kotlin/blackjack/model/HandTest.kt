@@ -14,7 +14,7 @@ class HandTest {
                 Card(Suit.DIAMONDS, Rank.QUEEN),
                 Card(Suit.DIAMONDS, Rank.FOUR),
             )
-        listOfCards.forEach { player.addCard(it) }
+        listOfCards.forEach { player.receiveCards(listOf(it)) }
         assertThat(player.calculatePoints()).isEqualTo(17)
     }
 
@@ -26,7 +26,7 @@ class HandTest {
                 Card(Suit.DIAMONDS, Rank.ACE),
                 Card(Suit.DIAMONDS, Rank.JACK),
             )
-        listOfCards.forEach { player.addCard(it) }
+        listOfCards.forEach { player.receiveCards(listOf(it)) }
         assertThat(player.calculatePoints()).isEqualTo(21)
     }
 
@@ -40,7 +40,8 @@ class HandTest {
                 Card(Suit.SPADES, Rank.ACE),
                 Card(Suit.DIAMONDS, Rank.JACK),
             )
-        listOfCards.forEach { player.addCard(it) }
+        listOfCards.forEach { player.receiveCards(listOf(it)) }
+
         assertThat(player.calculatePoints()).isEqualTo(13)
     }
 
@@ -54,7 +55,8 @@ class HandTest {
                 Card(Suit.SPADES, Rank.ACE),
                 Card(Suit.DIAMONDS, Rank.SEVEN),
             )
-        listOfCards.forEach { player.addCard(it) }
+        listOfCards.forEach { player.receiveCards(listOf(it)) }
+
         assertThat(player.calculatePoints()).isEqualTo(20)
     }
 }
