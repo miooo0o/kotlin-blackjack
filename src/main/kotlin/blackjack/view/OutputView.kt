@@ -13,7 +13,7 @@ object OutputView {
     }
 
     fun printDealerDrawsCards(player: Player) {
-        println("Dealer draws ${player.numberInHand() - 1} more card due to having 16 or less.")
+        println("Dealer draws ${player.cardsCount() - 1} more card due to having 16 or less.")
     }
 
     fun printAskForCard(player: Player) {
