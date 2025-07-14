@@ -6,7 +6,7 @@ class Player(name: String) {
 
     val name = person.name
 
-    val cards: Set<Card>
+    val cards: List<Card>
         get() = hand.cards
 
     val isBlackJack: Boolean

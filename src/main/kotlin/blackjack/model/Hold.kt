@@ -1,9 +1,9 @@
 package blackjack.model
 
 class Hold(hold: Set<Card>) {
-    private val _cards: MutableSet<Card> = hold.toMutableSet()
-    val cards: Set<Card>
-        get() = _cards.toSet()
+    private val _cards: MutableList<Card> = hold.toMutableList()
+    val cards: List<Card>
+        get() = _cards.toList()
 
     fun drawCards(count: Int): List<Card> {
         return _cards.take(count).toList()
