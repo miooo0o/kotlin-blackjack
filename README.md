@@ -34,3 +34,4 @@ OutputView.printStatistics(statistics)
 ```
 
 - [x] controller/GameManager → ABLE_TO_RECEIVE → DEALER_MUST_HIT_LIMIT
+- [ ] rename test functions in HandTest, PlayerFactoryTest
